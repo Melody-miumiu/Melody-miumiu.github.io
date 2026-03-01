@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>观息 · 东方香愈文化品牌</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PingFang SC", "Microsoft YaHei", "Songti SC", serif;
+}
+body {
+  background-color: #f7f5f0;
+  color: #4a4238;
+  line-height: 1.9;
+  overflow-x: hidden;
+}
+/* 固定导航栏 */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.92);
+  padding: 20px 0;
+  text-align: center;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(74,66,56,0.05);
+}
+nav a {
+  margin: 0 22px;
+  text-decoration: none;
+  color: #555;
+  font-size: 15px;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #a67c52;
+}
+/* 首屏主视觉 */
+.hero {
+  margin-top: 80px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  background: linear-gradient(rgba(247,245,240,0.3),rgba(247,245,240,0.3));
+}
+.hero h1 {
+  font-size: 46px;
+  font-weight: 300;
+  letter-spacing: 8px;
+  margin-bottom: 10px;
+}
+.hero .slogan {
+  font-size: 18px;
+  margin: 10px 0 20px;
+  color: #665c52;
+  letter-spacing: 2px;
+}
+.hero .phrase {
+  font-size: 16px;
+  color: #888;
+  margin-top: 30px;
+  letter-spacing: 1px;
+}
+/* 通用内容板块 */
+.section {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 0 25px;
+  text-align: center;
+}
+.section h2 {
+  font-size: 26px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+}
+.section p {
+  font-size: 16px;
+  color: #555;
+  text-align: justify;
+}
+/* 产品系列板块 */
+.product-series {
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  padding: 0 25px;
+}
+.series-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  color: #4a4238;
+}
+/* 核心优化：固定列数排版，彻底解决换行零散问题 */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 电脑端固定每行4个 */
+  gap: 30px;
+  margin-bottom: 80px;
+}
+.product-card {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* 统一卡片高度，避免高低不齐 */
+  display: flex;
+  flex-direction: column;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(74,66,56,0.08);
+}
+.product-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  background: #e9e4dc;
+  flex-shrink: 0;
+}
+.product-name {
+  padding: 18px 0 5px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.product-desc {
+  color: #999;
+  font-size: 13px;
+  padding-bottom: 18px;
+  margin-top: auto;
+}
+/* 平板端适配：固定每行2个 */
+@media (max-width: 1000px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  .product-img {
+    height: 240px;
+  }
+}
+/* 手机端适配：固定每行2个，不零散 */
+@media (max-width: 768px) {
+  nav a {
+    margin: 0 10px;
+    font-size: 13px;
+  }
+  .hero h1 {
+    font-size: 32px;
+    letter-spacing: 4px;
+  }
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .product-img {
+    height: 200px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 导航栏 -->
+<nav>
+  <a href="#home">首页</a>
+  <a href="#idea">品牌理念</a>
+  <a href="#products">产品系列</a>
+  <a href="#contact">联系我们</a>
+</nav>
+
+<!-- 首页首屏 -->
+<section class="hero" id="home">
+  <h1>观 息</h1>
+  <div class="slogan">一观一息，一香一愈</div>
+  <div class="phrase">烟起，看世界；烟落，看自己。</div>
+</section>
+
+<!-- 品牌理念 -->
+<section class="section" id="idea">
+  <h2>品牌理念</h2>
+  <p>
+    观，是观烟、观器、观境、观己——看见外在的雅致，也看见内在的自己；
+    息，是呼吸、歇息、息心、息躁——放缓匆忙的脚步，平息浮躁的心境。
+  </p>
+  <br>
+  <p>
+    我们取宋式极简之雅，承禅意通透之魂，以香为桥，连接外在感官与内在安宁。
+    不喧嚣、不浓烈，不刻意治愈他人，只专注安抚每一个疲惫的自己，
+    让每一次焚香、每一缕香气，都成为现代人逃离喧嚣、回归本心的出口，
+    在一呼一吸之间，慢下来，与自己温柔相逢。
+  </p>
+</section>
+
+<!-- 品牌定位 -->
+<section class="section">
+  <h2>品牌定位</h2>
+  <p>
+    以宋韵留白美学为骨，以禅意静心为魂，以香为媒介，
+    打造视觉·嗅觉·触觉·听觉·心觉五感合一的东方疗愈生活方式；
+    聚焦当代人焦虑痛点，用极简雅致的香文化，
+    为人们提供一段从喧嚣回归内心、安抚自我的治愈时光。
+  </p>
+</section>
+
+<!-- 完整产品系列 -->
+<section class="product-series" id="products">
+  <!-- 观烟系列 -->
+  <div class="series-title">观烟系列 · 线香 / 香篆</div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">观烟・清宁</div>
+      <div class="product-desc">静坐观烟，心自清明</div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">观烟・尘外</div>
+      <div class="product-desc">一炷香里，暂忘尘嚣</div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">观烟・松间</div>
+      <div class="product-desc">松风入怀，香息悠然</div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">观烟・月白</div>
+      <div class="product-desc">月下焚香，心若止水</div>
+    </div>
+  </div>
+
+  <!-- 栖境系列 -->
+  <div class="series-title">栖境系列 · 无火香薰</div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">栖境・闲庭</div>
+      <div class="product-desc">闲庭信步，香满一室</div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">栖境・空谷</div>
+      <div class="product-desc">空谷幽兰，香息清远</div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">栖境・书窗</div>
+      <div class="product-desc">书香伴香，岁月静好</div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">栖境・禅房</div>
+      <div class="product-desc">禅房静坐，香息定心</div>
+    </div>
+  </div>
+
+  <!-- 静序系列 -->
+  <div class="series-title">静序系列 · 香薰蜡烛</div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">静序・一息</div>
+      <div class="product-desc">一呼一吸，静序时光</div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">静序・安住</div>
+      <div class="product-desc">安住当下，心自安然</div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">静序・微光</div>
+      <div class="product-desc">微光摇曳，香息温暖</div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">静序・留白</div>
+      <div class="product-desc">留白之美，香息悠长</div>
+    </div>
+  </div>
+
+  <!-- 心息系列 -->
+  <div class="series-title">心息系列 · 香水 / 香氛喷雾</div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">心息・宋风</div>
+      <div class="product-desc">宋风雅韵，随身相伴</div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">心息・烟叙</div>
+      <div class="product-desc">烟香为叙，与己对话</div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">心息・素岚</div>
+      <div class="product-desc">素岚清风，香息清新</div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">心息・眠安</div>
+      <div class="product-desc">一夜好眠，香息入梦</div>
+    </div>
+  </div>
+
+  <!-- 观物系列 -->
+  <div class="series-title">观物系列 · 香器 / 周边</div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">观物・简炉</div>
+      <div class="product-desc">极简设计，宋韵雅器</div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">观物・素盘</div>
+      <div class="product-desc">素面朝天，香承雅意</div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">观物・清盏</div>
+      <div class="product-desc">清盏承香，心若明镜</div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-name">观物・闲盒</div>
+      <div class="product-desc">闲藏雅物，香伴时光</div>
+    </div>
+  </div>
+</section>
+
+<!-- 联系我们 -->
+<section class="contact" id="contact">
+  <h3>联系我们</h3>
+  <p>邮箱：13392901028@163.com</p>
+</section>
+
+<!-- 页脚 -->
+<footer>
+  © 2026 观息 · 东方香愈文化品牌 版权所有
+</footer>
+
+</body>
+</html>
